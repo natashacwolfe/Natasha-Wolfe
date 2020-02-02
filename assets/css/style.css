@@ -1,6 +1,7 @@
 /* nav compass image */
 .compass {
-    height: 70px;
+    height: 125px;
+    transform: rotate(92deg);
 }
 .grow { 
     transition: all .2s ease-in-out; 
@@ -8,10 +9,24 @@
 .grow:hover {
     transform: scale(1.1); 
 }
-
 /* nav links */
-.nav-links{
-    display: none;
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-links {
+    list-style-type: none;
+    display: none;    
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+
+.li-item{
+    text-decoration: none;
+    color: rgba(78, 95, 117, 0.952) 
 }
 
 /* main NW logo  */
