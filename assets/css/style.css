@@ -1,0 +1,21 @@
+/* nav compass image */
+.compass {
+    height: 70px;
+}
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+.grow:hover {
+    transform: scale(1.1); 
+}
+
+/* nav links */
+.nav-links{
+    display: none;
+}
+
+/* main NW logo  */
+.main-page-wrapper {
+    display: flex;
+    justify-content: center;
+}
