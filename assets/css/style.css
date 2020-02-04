@@ -1,36 +1,217 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif; 
+*/
+
+* {
+    box-sizing: border-box;
+}
+
 /* nav compass image */
 .compass {
-    height: 125px;
+    height: 100px;
     transform: rotate(92deg);
 }
 .grow { 
-    transition: all .2s ease-in-out; 
+    transition: all .3s ease-in-out; 
 }
 .grow:hover {
     transform: scale(1.1); 
 }
 /* nav links */
 .navbar {
+    position: fixed;
+    left: 88%;
     display: flex;
     justify-content: flex-end;
 }
 .nav-links {
-    list-style-type: none;
-    display: none;    
+    position: absolute;
+    right: 80%;
+    list-style: none;
+    display: none;   
     flex-direction: column;
     justify-content: space-between;
     
 }
-
+.li-item, a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: #67809f; 
+}
+@media only screen and (max-width: 767px) {
+    .navbar {
+        position: unset;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-links {
+        position: unset;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .li-item {
+        padding: 5%;
+    }
+    .compass {
+        display: none;
+    }
+}
 
 
 .li-item{
     text-decoration: none;
-    color: rgba(78, 95, 117, 0.952) 
 }
 
 /* main NW logo  */
 .main-page-wrapper {
     display: flex;
     justify-content: center;
+    height: -webkit-fill-available;
+}
+#main-image{
+    height: 500px;
+    width: 500px;
+    background: url("../images/3.png");
+    transition:  .15s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    .logo-main {
+    width: -webkit-fill-available;
+    }
+}
+
+/* about me */
+.page-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: rgba(92, 151, 191, .15);
+    /* border-left: 2px solid rgba(92, 151, 191, 1); */
+}
+.about-image {
+    display: flex;
+    height: 250px;
+    margin-top: 7%;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    background-color: rgba(92, 151, 191, .15);
+    /* border-right: 2px solid rgba(92, 151, 191, .5);
+    border-bottom: 2px solid rgba(92, 151, 191, .5); */
+    padding: 2%;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+}
+.page-title {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 92px;
+    color: #67809f;
+    margin: 0;
+}
+.page-header {
+    display: flex;
+    justify-content: space-around;
+}
+.portfolio-btn {
+    height: 150px;
+}
+@media only screen and (max-width: 767px) {
+    .page-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me {
+        margin-top: 12%;
+    }
+    .about-image {
+        width: inherit;
+    }
+    .media-about-me-title {
+        display: flex;
+    }
+    .page-title {
+        text-align: center;
+        font-size: 50px;
+    }
+  }
+  @media only screen and (max-width: 370px) {
+      .page-title {
+          font-size: 38px;
+      }
+  }
+
+  /* portfolio page */
+  .portfolio-container {
+      flex-direction: column;
+  }
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-top: 7%;
+}
+
+.flip-card:last-child {
+    margin-bottom: 7%;
+}
+
+.flip-card-inside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inside {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front-image {
+    height: 300px;
+    width: 300px;
+}
+.flip-front {
+    background-color: #bbb;
+}
+.flip-back {
+    background-color: rgba(108, 122, 137, .5);
+    transform: rotateY(180deg);
+    color: white;
+    font-family: 'Raleway', sans-serif; 
+}
+.flip-back-title {
+    font-size: 22px;
+}
+
+.portfolio-inside {
+    padding: 0 15%;
+    background-color:  rgba(92, 151, 191, .15);
+}
+
+/* contact page */
+
+.contact-page{
+    flex-direction: column;
+}
+.contact-inside{
+    background-color:  rgba(92, 151, 191, .15);
 }
