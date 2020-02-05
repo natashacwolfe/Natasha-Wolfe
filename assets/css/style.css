@@ -186,7 +186,6 @@ font-family: 'Raleway', sans-serif;
       margin-bottom: 1rem;
   }
   .collapsed {
-    display: flex;
     flex-direction: column;
     position: relative;
     background-color: rgba(92, 151, 191, .15);
@@ -206,9 +205,6 @@ font-family: 'Raleway', sans-serif;
 
   .portfolio-container {
       flex-direction: column;
-  }
-  .eats {
-      height: 200px;
   }
 
 .flip-card {

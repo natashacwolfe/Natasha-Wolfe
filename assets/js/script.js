@@ -5,6 +5,8 @@ let i = 0;
 let smallLogoImage = document.getElementById('small-main-image')
 let smallSwitchImages = ['./assets/images/1small.png', './assets/images/2small.png', './assets/images/3small.png','./assets/images/4small.png' ]
 let j = 0;
+let galleryTile = document.querySelector('.gallery-image');
+let hidden = document.querySelector('.collapsed');
 // function toggleImg(event){
 //     console.log(event);
 //     console.log(switchImages)
@@ -16,10 +18,10 @@ let timer = setInterval(toggleImg, 800);
 
 
 function toggleImg(){
-    console.log("done")
+    // console.log("done")
     logoImage.style.background = `url('${switchImages[i]}')`;
     logoImage.style.backgroundRepeat="no-repeat";
-    console.log(logoImage);
+    // console.log(logoImage);
     if (i < switchImages.length - 1){
         i++;
     } else {
@@ -30,15 +32,25 @@ let smallImgTimer = setInterval(toggleImgSmall, 800);
 
 
 function toggleImgSmall(){
-    console.log("done")
+    // console.log("done")
     smallLogoImage.style.background = `url('${smallSwitchImages[i]}')`;
     smallLogoImage.style.backgroundRepeat="no-repeat";
-    console.log(logoImage);
+    // console.log(logoImage);
     if (i < smallSwitchImages.length - 1){
         j++;
     } else {
         j = 0;
     }
-}
+};
 
+function showHidden(event) {
+    console.log(event)
+    console.log(hidden.style.display)
+    if (hidden.style.display = 'none') {
+        hidden.style.display = 'flex';
+        console.log(hidden.style.display)
+    } else if (hidden.style.display != 'none')
+        hidden.style.display = 'none';
+};
 // logoImage.addEventListener('mouseover', toggleImg);
+galleryTile.addEventListener('click', showHidden);
