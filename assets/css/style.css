@@ -58,7 +58,7 @@ font-family: 'Raleway', sans-serif;
         visibility: visible;
     }
     .li-item {
-        padding: 5%;
+        padding: 10%;
     }
     .compass {
         display: none;
@@ -230,7 +230,13 @@ font-family: 'Raleway', sans-serif;
     background-color:  rgba(92, 151, 191, .15);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
+@media only screen and (max-width: 767px) {
+    .flip-card:active .flip-card-inside {
+        transform: rotateY(180deg);
+    }
 
+
+}
 /* contact page */
 
 .contact-title {
