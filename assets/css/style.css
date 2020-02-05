@@ -11,6 +11,10 @@ font-family: 'Raleway', sans-serif;
     height: 100px;
     transform: rotate(92deg);
 }
+.navbar:hover .nav-links {
+    visibility: visible;
+    /* display: flex; */
+}
 .grow { 
     transition: all .3s ease-in-out; 
 }
@@ -28,7 +32,8 @@ font-family: 'Raleway', sans-serif;
     position: absolute;
     right: 80%;
     list-style: none;
-    display: none;   
+    display: flex;   
+    visibility: hidden;
     flex-direction: column;
     justify-content: space-between;
     
@@ -43,12 +48,14 @@ font-family: 'Raleway', sans-serif;
         position: unset;
         display: flex;
         justify-content: center;
+
     }
     .nav-links {
         position: unset;
         display: flex;
         flex-direction: row;
         padding: 0;
+        visibility: visible;
     }
     .li-item {
         padding: 5%;
@@ -70,15 +77,27 @@ font-family: 'Raleway', sans-serif;
     height: -webkit-fill-available;
 }
 #main-image{
-    height: 500px;
+    /* height: 500px; */
+    height: 100%vh;
     width: 500px;
-    background: url("../images/3.png");
+    background: url("../images/3.png") no-repeat;
     transition:  .15s ease;
+}
+#small-main-image {
+    display: none;
 }
 
 @media only screen and (max-width: 767px) {
-    .logo-main {
-    width: -webkit-fill-available;
+    .main-page-wrapper {
+    }
+    #main-image {
+        display: none;
+    }
+    #small-main-image{
+        display: flex;
+        width: 100%;
+        background: url("../images/3small.png") no-repeat;
+        transition: .15s ease;
     }
 }
 
@@ -91,12 +110,13 @@ font-family: 'Raleway', sans-serif;
     margin: auto;
     margin-bottom: 40px;
     background-color: rgba(92, 151, 191, .15);
-    /* border-left: 2px solid rgba(92, 151, 191, 1); */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 .about-image {
     display: flex;
     height: 250px;
     margin-top: 7%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 
 .about-me {
@@ -104,11 +124,11 @@ font-family: 'Raleway', sans-serif;
     align-items: center;
     margin: 2%;
     background-color: rgba(92, 151, 191, .15);
-    /* border-right: 2px solid rgba(92, 151, 191, .5);
-    border-bottom: 2px solid rgba(92, 151, 191, .5); */
+
     padding: 2%;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 .page-title {
     font-family: 'Raleway', sans-serif; 
@@ -117,12 +137,11 @@ font-family: 'Raleway', sans-serif;
     margin: 0;
 }
 .page-header {
+    margin-top: 10%;
     display: flex;
     justify-content: space-around;
 }
-.portfolio-btn {
-    height: 150px;
-}
+
 @media only screen and (max-width: 767px) {
     .page-container {
         flex-direction: column;
@@ -152,6 +171,9 @@ font-family: 'Raleway', sans-serif;
   .portfolio-container {
       flex-direction: column;
   }
+  .eats {
+      height: 200px;
+  }
 
 .flip-card {
     background-color: transparent;
@@ -172,7 +194,7 @@ font-family: 'Raleway', sans-serif;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 
 .flip-card:hover .flip-card-inside {
@@ -199,19 +221,56 @@ font-family: 'Raleway', sans-serif;
     font-family: 'Raleway', sans-serif; 
 }
 .flip-back-title {
-    font-size: 22px;
+    font-size: 32px;
 }
 
 .portfolio-inside {
+    margin: 2% 0;
     padding: 0 15%;
     background-color:  rgba(92, 151, 191, .15);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 
 /* contact page */
+
+.contact-title {
+    font-size: 36px;
+}
 
 .contact-page{
     flex-direction: column;
 }
 .contact-inside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+    width: 100%;
     background-color:  rgba(92, 151, 191, .15);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact-img {
+    height: 50px;
+}
+
+.contact-name-p {
+    margin: 1%;
+    font-family: 'Raleway', sans-serif;
+    color: #67809f; 
+    font-size: 22px;
+}
+
+.contact-page>a{
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-info{
+        font-size: 16px;
+    }
 }

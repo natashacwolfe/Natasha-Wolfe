@@ -11,20 +11,21 @@
     <nav>
         <div class="navbar">     
             <ul class="nav-links">
-                <li class="li-item"><a href='about.html'>About</a></li>
-                <li class="li-item"><a href='portfolio.html'>Works</a></li>
-                <li class="li-item"><a href='contact.html'>Contact</a></li>
+                <li class="li-item"><a href='#about'>About</a></li>
+                <li class="li-item"><a href='#work'>Works</a></li>
+                <li class="li-item"><a href='#contact'>Contact</a></li>
             </ul>
             <img class='compass grow' src='assets/images/westCompass.png'>
         </div>
     </nav>
-    <div class="main-page-wrapper">
+    <div class="main-page-wrapper" id='top'>
         <div id="main-image"></div>
+        <div id='small-main-image'></div>
         <!-- <img class='logo-main' src='assets/images/3.png' alt='Natasha Wolfe'> -->
     </div>
 
     <div class="page-header">
-        <p class='page-title'> Hi, I'm Natasha Wolfe</p>
+        <p class='page-title' id='about'> Hi, I'm Natasha Wolfe</p>
     </div>
     <div class="page-container">
         <div class='.img-div'>
@@ -38,7 +39,7 @@
     </div>
 
     <div class="page-header">
-        <div class="page-title">WORK</div>
+        <div class="page-title" id='work'>WORK</div>
     </div>
     <div class="page-container portfolio-container">
         <div class="portfolio-inside">
@@ -48,9 +49,8 @@
                         <img class='front-image' src='assets/images/Screenshot (8).png' alt='eats&events'>
                     </div>
                     <div class="flip-back">
-                        <p class='flip-back-title'>Eats & Events</p>
-                        <p>Find eats & events near you</p>
-                        <p>Collaborated project</p>
+                        <a href='https://rnyang-16.github.io/Project-1-Group-5/'target="_blank"><p class='flip-back-title'>EATS & EVENTS</p></a>
+                        <a href='https://github.com/rnyang-16/Project-1-Group-5'target="_blank"><img src='./assets/images/git-small.png'></a>
                     </div>
                 </div>
             </div>
@@ -60,9 +60,8 @@
                         <img class='front-image' src='assets/images/weather.png' alt='weather dashboard'>
                     </div>
                     <div class="flip-back">
-                        <p class='flip-back-title'>Weather Dashboard</p>
-                        <p>Current & Five day</p>
-                        <p>Playing with APIs</p>
+                        <a href='https://natashacwolfe.github.io/weather-dashboard/'target="_blank"><p class='flip-back-title'>WEATHER DASHBOARD</p></a>
+                        <a href='https://github.com/natashacwolfe/weather-dashboard.git'target="_blank"><img src='./assets/images/git-small.png'></a>
                     </div>
                 </div>
             </div>
@@ -72,20 +71,27 @@
                             <img class='front-image' src='assets/images/day-planner.png' alt='day planner'>
                         </div>
                         <div class="flip-back">
-                            <p class='flip-back-title'>Work Planner</p>
-                            <p>Save events for your day</p>
-                            <p>Playing with local storage</p>
+                        <a href='https://natashacwolfe.github.io/day-planner/' target="_blank"><p class='flip-back-title'>DAY PLANNER </p></a>
+                        <a href='https://github.com/natashacwolfe/day-planner.git' target="_blank"><img src='./assets/images/git-small.png'></a>    
                         </div>
                     </div>
                 </div>
         </div>
     </div>
-    <div class="page-container contact-page">
+    <div class="page-header">
+        <div class="page-title contact-title" id='contact'>LETS CONNECT</div>
+    </div>
+    <div class="page-container contact-page" > 
         <div class="contact-inside">
-            <a class='contact-img' href='https://github.com/natashacwolfe 'target="_blank"><img src='assets/images/git.png' alt='github' ></a>
-            <a class='contact-img' href='https://www.linkedin.com/in/natasha-wolfe-887488194/' target="_blank"><img src='assets/images/linked.png' alt='LinkedIn'></a>
-            <a class='contact-img' href="mailto:natasha.c.wolfe@gmail.com" target="outlook"><img src='assets/images/email.png' alt='email'></a>
-            <a class='contact-img' href="tel:425-625-8120"><img src='assets/images/phone.png' alt='call'></a>
+        <p class='contact-name-p'>Natasha Wolfe</p>
+        <a href="mailto:natasha.c.wolfe@gmail.com" target="outlook"><p class="contact-info">natasha.c.wolfe@gmail.com</p c></a>
+        <a href="tel:425-625-8120"><p class="contact-info">(425)625-8120</p></a>
+            <div class="links">
+                <a href='https://github.com/natashacwolfe 'target="_blank"><img class='contact-img grow' src='assets/images/git.png' alt='github' ></a>
+                <a href='https://www.linkedin.com/in/natasha-wolfe-887488194/' target="_blank"><img class='contact-img grow' src='assets/images/linked.png' alt='LinkedIn'></a>
+                <!-- <img class='contact-img' src='assets/images/email.png' alt='email'> -->
+                <!-- <img class='contact-img' src='assets/images/phone.png' alt='call'> -->
+            </div>
         </div>
     </div>
 <script src='./assets/js/script.js'></script>
