@@ -94,6 +94,9 @@ font-family: 'Raleway', sans-serif;
         display: none;
     }
     #small-main-image{
+        position: relative;
+        top: 60px;
+        left: 60px;
         display: flex;
         width: 100%;
         background: url("../images/3small.png") no-repeat;
@@ -168,6 +171,39 @@ font-family: 'Raleway', sans-serif;
   }
 
   /* portfolio page */
+
+  /* MOBILE PORTFOLIO */
+  .gallery-image {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  }
+  .gallery-image:first-child {
+      margin-top: 1rem;
+  }
+  .gallery-image:last-child {
+      margin-bottom: 1rem;
+  }
+  .collapsed {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(92, 151, 191, .15);
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    display: none;
+  }
+  .mobile-card-title {
+    text-align: center;
+    font-size: 17px;
+  }
+  .mobile-card-git {
+    height: 50px;
+    margin-left: 30%;
+  }
+  /* end mobile gallery css */
+
   .portfolio-container {
       flex-direction: column;
   }
@@ -226,13 +262,22 @@ font-family: 'Raleway', sans-serif;
 
 .portfolio-inside {
     margin: 2% 0;
-    padding: 0 15%;
+    padding: 1rem;
     background-color:  rgba(92, 151, 191, .15);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
+.mobile-portfolio {
+    display: none;
+}
 @media only screen and (max-width: 767px) {
-    .flip-card:active .flip-card-inside {
-        transform: rotateY(180deg);
+    .desktop-portfolio {
+        display: none;
+    }
+    .mobile-portfolio {
+        display: flex;
+    }
+    .mobile-back {
+        visibility: visible;
     }
 
 
