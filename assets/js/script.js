@@ -5,8 +5,7 @@ let i = 0;
 let smallLogoImage = document.getElementById('small-main-image')
 let smallSwitchImages = ['./assets/images/1small.png', './assets/images/2small.png', './assets/images/3small.png','./assets/images/4small.png' ]
 let j = 0;
-let galleryTile = document.querySelector('.gallery-image');
-let hidden = document.querySelector('.collapsed');
+let galleryTile = document.querySelectorAll('.gallery-image');
 // function toggleImg(event){
 //     console.log(event);
 //     console.log(switchImages)
@@ -44,13 +43,19 @@ function toggleImgSmall(){
 };
 
 function showHidden(event) {
-    console.log(event)
+    // let hidden = document.querySelector('.collapsed');
+    let gallerycard = event.target.closest(".gallery-card")
+    let hidden = (gallerycard.querySelector(".collapsed"));
+    console.log(hidden)
     console.log(hidden.style.display)
-    if (hidden.style.display = 'none') {
+    if (hidden.style.display == 'flex') {
+        hidden.style.display = 'none'; 
+    } else{
         hidden.style.display = 'flex';
-        console.log(hidden.style.display)
-    } else if (hidden.style.display != 'none')
-        hidden.style.display = 'none';
+        console.log(hidden.style.display);
+    }
 };
 // logoImage.addEventListener('mouseover', toggleImg);
-galleryTile.addEventListener('click', showHidden);
+galleryTile.forEach((tile)=>{
+    tile.addEventListener('click', showHidden);
+})
