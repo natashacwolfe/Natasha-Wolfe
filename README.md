@@ -4,7 +4,7 @@
 
 ## General Info 
 
-A first portfolio that I have creative fredom to play with!
+A first portfolio that I have creative fredom to play with! It was exciting to explore CSS more, transitions and transform.
 
 [Take a look!](https://natashacwolfe.github.io/Natasha-Wolfe/)
 
