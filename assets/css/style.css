@@ -186,6 +186,7 @@ font-family: 'Raleway', sans-serif;
       margin-bottom: 1rem;
   }
   .collapsed {
+      width: 200px;
     flex-direction: column;
     position: relative;
     background-color: rgba(92, 151, 191, .15);
@@ -206,6 +207,8 @@ font-family: 'Raleway', sans-serif;
   .portfolio-container {
       flex-direction: column;
   }
+
+
 
 .flip-card {
     background-color: transparent;
@@ -254,6 +257,10 @@ font-family: 'Raleway', sans-serif;
 }
 .flip-back-title {
     font-size: 32px;
+}
+  /* for par card only text is too large for card */
+  .par {
+      font-size: 22px;
 }
 
 .portfolio-inside {
